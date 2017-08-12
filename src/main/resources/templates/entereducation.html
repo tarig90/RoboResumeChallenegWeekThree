@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>Welcome - Enter Education Details</title>
+</head>
+<body>
+
+<h1></h1>
+
+<form action="#" th:action="@{/entereducation}" th:object="${neweduc}" method="post">
+
+
+    <p>Enter School Name <input type="text" th:field="*{schoolName}"/></p>
+    <p>Enter Year of Graduation <input type="date" th:field="*{yearOfGraduation}"/></p>
+
+
+    <input type="submit" value="Enter Resume Details"/>
+    <input type="reset" value="Reset"/>
+
+</form>
+</body>
+
+
+</html>
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8"/>-->
+    <!--<title>Welcome - Enter Education Details</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<h1></h1>-->
+
+<!--<form action="#" th:action="@{/entereducation}" th:object="${neweduc}" method="post">-->
+
+
+    <!--<p>Enter Educational Establishment: <input type="text" th:field="*{neweduc.schoolName}"/></p>-->
+    <!--<p>Enter Year of Graduation: <input type="text" th:field="*{neweduc.yearOfGraduation}"/></p>-->
+
+
+    <!--<input type="submit" value="AddEducation" />-->
+    <!--<input type="reset" value="Reset"/>-->
+
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->

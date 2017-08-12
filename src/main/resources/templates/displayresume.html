@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Display All Records</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+</head>
+<body>
+<h1> Displayed Report</h1>
+
+
+
+<table>
+
+    <tr>
+        <td> Candidate Name</td>
+        <td> Candidadte Email</td>
+
+
+    </tr>
+    <!--<th:block th:each="reso:${resume}">-->
+    <tr th:each="reso:${resumeObjects}">
+        <td><p th:text="${reso.name}"/></td>
+        <td><p th:text="${reso.emailAddress}"/></td>
+
+    </tr>
+
+    <tr>
+        <td><p>School Name</p></td>
+        <td><p>Graduation Date</p></td>
+
+    </tr>
+
+<tr th:each="edu:${resumeObjects.education}">
+
+    <!--<th:block th:each="edu.educationlist:${robo}"-->
+    <td><p th:text="${edu.schoolName}"/></td>
+      <td><p th:text="${edu.yearOfGraduation}"/></td>
+    <!--</th:block>-->
+</tr>
+
+    <tr>
+        <td> Title </td>
+        <td> Company Name </td>
+        <td> Duty 1 </td>
+        <td> Duty 2 </td>
+
+    </tr>
+
+    <tr th:each="exp:${resumeObjects.experience}">
+
+        <!--<th:block th:each="edu.educationlist:${robo}"-->
+        <td><p th:text="${exp.title}"/></td>
+        <td><p th:text="${exp.companyName}"/></td>
+        <td><p th:text="${exp.duty1}"/></td>
+        <td><p th:text="${exp.duty2}"/></td>
+        <!--</th:block>-->
+    </tr>
+
+    <tr>
+        <td> Skill One</td>
+        <td> Skill Two </td>
+
+    </tr>
+
+    <tr th:each="skil:${resumeObjects.skillSet}">
+
+        <!--<th:block th:each="edu.educationlist:${robo}"-->
+        <td><p th:text="${skil.skillOne}"/></td>
+        <td><p th:text="${skil.skillTwo}"/></td>
+
+        <!--</th:block>-->
+    </tr>
+
+    <!--</th:block>-->
+
+    <!--<th:block th:each="exper:${allexp}">-->
+      <!--<p> <td><p th:text="${exper.title}"/></td></p>-->
+        <!--<p> <td><p th:text="${exper.companyName}"/></td></p>-->
+        <!--<p>  <td><p th:text="${exper.duty1}"/></td></p>-->
+        <!--<p>   <td><p th:text="${exper.duty1}"/></td></p>-->
+    <!--</th:block>t-->
+
+    <!--<th:block th:each="skll:${allskill}">-->
+        <!--<td><p th:text="${skll.skillOne}"/></td>-->
+        <!--<td><p th:text="${skll.skillTwo}"/></td>-->
+
+    <!--</th:block>-->
+
+
+
+
+</table>
+<table>
+
+
+</table>
+
+
+<!--initiates a GET back to /add an employee-->
+<a href="/addemployment">Add another employee</a>
+</body>
+</html>

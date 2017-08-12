@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Experience details</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+</head>
+<body>
+<h1>Experience added successfully</h1>
+
+
+<p th:text="'Name: ' + ${newexp.title}"/>
+<p th:text="'Email: ' + ${newexp.companyName}"/>
+<p th:text="'Name: ' + ${newexp.duty1}"/>
+<p th:text="'Email: ' + ${newexp.duty2}"/>
+
+
+<a href="enterresume">Add anotherResume</a>
+<a href="displayresume"> Display Full Resume</a>
+<a></a>
+</body>
+</html>

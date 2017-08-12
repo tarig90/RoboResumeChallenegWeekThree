@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employement details</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+</head>
+<body>
+<h1>Education added successfully</h1>
+
+
+<p th:text="'School Name ' + ${neweduc.schoolName}"/>
+<p th:text="'Year of Graduation: ' + ${neweduc.yearOfGraduation}"/>
+
+<a href="enterexperience">Add Previous Employment Experiences</a>
+
+<a href="/entereducation">Add another educational establishment</a>
+<a></a>
+</body>
+</html>

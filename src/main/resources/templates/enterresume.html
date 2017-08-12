@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>Welcome - Enter EXperience Details</title>
+</head>
+<body>
+
+<h1></h1>
+
+<form action="#" th:action="@{/enterresume}" th:object="${newres}" method="post">
+
+
+    <p>Enter Name <input type="text" th:field="*{name}"/></p>
+    <p>Enter Email Address<input type="text" th:field="*{emailAddress}"/></p>
+
+
+    <input type="submit" value="Enter Resume Details"/>
+    <input type="reset" value="Reset"/>
+
+</form>
+</body>
+</html>

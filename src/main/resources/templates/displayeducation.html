@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Display All Records</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+</head>
+<body>
+<h1>EDucation Displayed Report</h1>
+
+<table>
+
+    <tr>
+        <td><p>School Name</p></td>
+        <td><p>Year of Graduation</p></td>
+
+    </tr>
+
+
+    <th:block th:each="educs:${educalistas}">
+        <tr>
+            <td><p th:text="${educs.schoolName}"/></td>
+            <td><p th:text="${educs.yearOfGraduation}"/></td>
+
+        </tr>
+    </th:block>
+</table>
+<!--initiates a GET back to /add an employee-->
+<a href="/addemployment">Add another employee</a>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Display All Records</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+</head>
+<body>
+<h1>Skills Displayed Report</h1>
+
+<table>
+
+    <tr>
+        <td><p>Skill One</p></td>
+        <td><p>Skill Two</p></td>
+
+    </tr>
+
+
+    <th:block th:each="skilo:${skillistas}">
+        <tr>
+            <td><p th:text="${skilo.skillOne}"/></td>
+            <td><p th:text="${skilo.skillTwo}"/></td>
+
+        </tr>
+    </th:block>
+</table>
+<!--initiates a GET back to /add an employee-->
+<a href="/addemployment">Add another employee</a>
+</body>
+</html>

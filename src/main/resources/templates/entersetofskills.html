@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>Welcome - Enter Education Details</title>
+</head>
+<body>
+
+<h1></h1>
+
+<form action="#" th:action="@{/entersetofskills}" th:object="${newskill}" method="post">
+
+
+    <p>First Skill <input type="text" th:field="*{skillOne}"/></p>
+    <p>Second Skill: <input type="text" th:field="*{skillTwo}"/></p>
+
+
+    <input type="submit" value="AddEducation" />
+    <input type="reset" value="Reset"/>
+
+</form>
+</body>
+</html>
