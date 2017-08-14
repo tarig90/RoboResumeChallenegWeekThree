@@ -15,7 +15,12 @@
 
 
     <p>Enter School Name <input type="text" th:field="*{schoolName}"/></p>
+
+        <span class="container" th:if="${#fields.hasErrors('schoolName')}" th:errors="*{schoolName}"> School Name</span>
+
     <p>Enter Year of Graduation <input type="date" th:field="*{yearOfGraduation}"/></p>
+
+        <!--<span th:if="${#fields.hasErrors('yearOfGraduation')}" th:errors="*{yearOfGraduation}"> Year of Graduation</span></p>-->
 
 
     <input type="submit" value="Enter Resume Details"/>

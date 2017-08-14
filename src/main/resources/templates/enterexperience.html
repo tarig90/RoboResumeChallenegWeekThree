@@ -19,14 +19,16 @@
 
 
     <p>Enter Job Title <input type="text" th:field="*{title}"/></p>
+    <span class="container" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"> Title</span>
 
-  
+
     <p>Enter Company Name <input type="text" th:field="*{companyName}"/></p>
-
+    <span class="container" th:if="${#fields.hasErrors('companyName')}" th:errors="*{companyName}"> Company Name</span>
     <p>Enter First Duty <input type="text" th:field="*{duty1}"/></p>
-
+    <span class="container" th:if="${#fields.hasErrors('duty1')}" th:errors="*{duty1}"> Duty1</span>
 
     <p>Enter Second Duty: <input type="text" th:field="*{duty2}"/></p>
+    <span class="container" th:if="${#fields.hasErrors('duty2')}" th:errors="*{duty2}"> Duty2</span>
 
 
     <input type="submit" value="AddExperience"/>

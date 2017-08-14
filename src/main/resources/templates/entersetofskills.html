@@ -19,7 +19,10 @@
 
 
     <p>First Skill <input type="text" th:field="*{skillOne}"/></p>
+    <span class="container" th:if="${#fields.hasErrors('skillOne')}" th:errors="*{skillOne}">Skill ONe  </span>
+
     <p>Second Skill: <input type="text" th:field="*{skillTwo}"/></p>
+    <span class="container" th:if="${#fields.hasErrors('skillTwo')}" th:errors="*{skillTwo}"> Skill two </span>
 
 
     <input type="submit" value="AddEducation" />

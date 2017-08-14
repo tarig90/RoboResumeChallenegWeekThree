@@ -4,6 +4,7 @@ package roboresumechallengethree.demo.ControlFacade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -51,7 +52,7 @@ public class MainController {
     }
 
     @PostMapping("/entereducation")
-    public String postEnterEDucation(@Valid @ModelAttribute("neweduc") EducationalAchievements eduction)
+    public String postEnterEDucation(@Valid @ModelAttribute("neweduc") EducationalAchievements eduction, BindingResult bindingResult)
     {
         educationRepository.save(eduction);
 
@@ -68,7 +69,7 @@ public class MainController {
 
 
     @PostMapping("/enterexperience")
-    public String postEnterEXperience(@Valid @ModelAttribute("newexp") Experience experience)
+    public String postEnterEXperience(@Valid @ModelAttribute("newexp") Experience experience , BindingResult bindingResult)
     {
        experienceRepository.save(experience);
        return  "experienceconfirmed";
@@ -83,7 +84,7 @@ public class MainController {
 
 
     @PostMapping("/entersetofskills")
-    public String postSkills(@Valid @ModelAttribute("newskill") Skills skills)
+    public String postSkills(@Valid @ModelAttribute("newskill") Skills skills, BindingResult bindingResult)
     {
         skillRepository.save(skills);
         return "skillsconfirmed";
@@ -98,7 +99,7 @@ public class MainController {
     }
 
     @PostMapping("/enterresume")
-    public String postResume(@Valid @ModelAttribute("newres") Resume resume)
+    public String postResume(@Valid @ModelAttribute("newres") Resume resume, BindingResult bindingResult)
     {
         resumeRepository.save(resume);
         return "confirmresume";
