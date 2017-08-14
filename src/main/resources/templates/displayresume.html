@@ -1,11 +1,16 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Display All Records</title>
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+
 </head>
 <body>
-<h1> Displayed Report</h1>
+<nav class="navbar navbar-inverse"> <div class="container-fluid"> <div class="navbar-header"> <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a href="#" class="navbar-brand">HR Home Page</a> </div> <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9"> <ul class="nav navbar-nav"> <li class="active"><a href="#">HR Page</a></li> <li><a href="enterresume.html">New Resume</a></li> <li><a href="displayresume.html">Full Resume Report</a></li> </ul> </div> </div> </nav>
+<div class="container">
+<h1> Resume Report </h1>
 
 
 
@@ -17,7 +22,7 @@
 
 
     </tr>
-    <!--<th:block th:each="reso:${resume}">-->
+
     <tr th:each="reso:${resumeObjects}">
         <td><p th:text="${reso.name}"/></td>
         <td><p th:text="${reso.emailAddress}"/></td>
@@ -32,10 +37,9 @@
 
 <tr th:each="edu:${resumeObjects.education}">
 
-    <!--<th:block th:each="edu.educationlist:${robo}"-->
     <td><p th:text="${edu.schoolName}"/></td>
       <td><p th:text="${edu.yearOfGraduation}"/></td>
-    <!--</th:block>-->
+
 </tr>
 
     <tr>
@@ -48,12 +52,12 @@
 
     <tr th:each="exp:${resumeObjects.experience}">
 
-        <!--<th:block th:each="edu.educationlist:${robo}"-->
+
         <td><p th:text="${exp.title}"/></td>
         <td><p th:text="${exp.companyName}"/></td>
         <td><p th:text="${exp.duty1}"/></td>
         <td><p th:text="${exp.duty2}"/></td>
-        <!--</th:block>-->
+
     </tr>
 
     <tr>
@@ -64,27 +68,12 @@
 
     <tr th:each="skil:${resumeObjects.skillSet}">
 
-        <!--<th:block th:each="edu.educationlist:${robo}"-->
+
         <td><p th:text="${skil.skillOne}"/></td>
         <td><p th:text="${skil.skillTwo}"/></td>
 
-        <!--</th:block>-->
     </tr>
 
-    <!--</th:block>-->
-
-    <!--<th:block th:each="exper:${allexp}">-->
-      <!--<p> <td><p th:text="${exper.title}"/></td></p>-->
-        <!--<p> <td><p th:text="${exper.companyName}"/></td></p>-->
-        <!--<p>  <td><p th:text="${exper.duty1}"/></td></p>-->
-        <!--<p>   <td><p th:text="${exper.duty1}"/></td></p>-->
-    <!--</th:block>t-->
-
-    <!--<th:block th:each="skll:${allskill}">-->
-        <!--<td><p th:text="${skll.skillOne}"/></td>-->
-        <!--<td><p th:text="${skll.skillTwo}"/></td>-->
-
-    <!--</th:block>-->
 
 
 
@@ -96,7 +85,10 @@
 </table>
 
 
-<!--initiates a GET back to /add an employee-->
+
 <a href="/addemployment">Add another employee</a>
+    <img src="http://www.letu.edu/opencms/export/sites/default/alumni/Life_after_LETU/SeniorBook/resumegoodatstuff2.jpg" height="900" width="636"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</div>
 </body>
 </html>
