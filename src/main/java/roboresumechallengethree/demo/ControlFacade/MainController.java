@@ -16,6 +16,7 @@ import roboresumechallengethree.demo.Repository.EducationRepository;
 import roboresumechallengethree.demo.Repository.ExperienceRepository;
 import roboresumechallengethree.demo.Repository.SkillRepository;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 
 @Controller
@@ -50,7 +51,7 @@ public class MainController {
     }
 
     @PostMapping("/entereducation")
-    public String postEnterEDucation(@ModelAttribute("neweduc") EducationalAchievements eduction)
+    public String postEnterEDucation(@Valid @ModelAttribute("neweduc") EducationalAchievements eduction)
     {
         educationRepository.save(eduction);
 
@@ -67,7 +68,7 @@ public class MainController {
 
 
     @PostMapping("/enterexperience")
-    public String postEnterEXperience(@ModelAttribute("newexp") Experience experience)
+    public String postEnterEXperience(@Valid @ModelAttribute("newexp") Experience experience)
     {
        experienceRepository.save(experience);
        return  "experienceconfirmed";
@@ -82,7 +83,7 @@ public class MainController {
 
 
     @PostMapping("/entersetofskills")
-    public String postSkills(@ModelAttribute("newskill") Skills skills)
+    public String postSkills(@Valid @ModelAttribute("newskill") Skills skills)
     {
         skillRepository.save(skills);
         return "skillsconfirmed";
@@ -97,7 +98,7 @@ public class MainController {
     }
 
     @PostMapping("/enterresume")
-    public String postResume(@ModelAttribute("newres") Resume resume)
+    public String postResume(@Valid @ModelAttribute("newres") Resume resume)
     {
         resumeRepository.save(resume);
         return "confirmresume";
